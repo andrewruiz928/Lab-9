@@ -11,7 +11,7 @@ def encoder(password):
 
 def decoder(password):
     password_list = [int(i) for i in password]
-    decoded_password_list = [str(num-3) for num in password_list]
+    decoded_password_list = [str((num-3)%10) for num in password_list]
     decoded_password = ''.join(decoded_password_list)
     return decoded_password
 
